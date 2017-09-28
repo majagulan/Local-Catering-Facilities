@@ -1,0 +1,24 @@
+﻿<Window x:Class="HCI_Lokali.EditTip"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Izmena tipa" Height="338" Width="400"
+        Closing="Window_Closing" Background="#FFA2D9FA">
+    <Grid Name="grid">
+        <Grid.BindingGroup>
+            <BindingGroup Name="bindingGroup"/>
+        </Grid.BindingGroup>
+        <Label Content="Oznaka:" Height="28" HorizontalAlignment="Left" Margin="12,26,0,0" Name="oznaka" VerticalAlignment="Top" FontSize="14" />
+        <Label Content="Ime:" Height="28" HorizontalAlignment="Left" Margin="12,70,0,0" Name="ime" VerticalAlignment="Top" FontSize="14" />
+        <Label Content="Ikonica:" Height="28" HorizontalAlignment="Left" Margin="267,12,0,0" Name="ikonica" VerticalAlignment="Top" FontSize="14" />
+        <Label Content="Opis:" Height="28" HorizontalAlignment="Left" Margin="12,127,0,0" Name="opis" VerticalAlignment="Top" FontSize="14" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="70,30,0,0"  Text="{Binding Path=oznaka}" VerticalAlignment="Top" Width="120" Name="oznakat" TextChanged="oznakat_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="70,70,0,0"  Text="{Binding Path=ime}" VerticalAlignment="Top" Width="120" Name="imet" TextChanged="imet_TextChanged" />
+        <Button Content="Uredu" Height="31" HorizontalAlignment="Left" Margin="70,215,0,0" Name="u_redu" VerticalAlignment="Top" Width="75" Click="u_redu_Click" Background="#FFF4FF6F" FontSize="16" />
+        <Button Content="Izlaz" Height="31" HorizontalAlignment="Left" Margin="247,215,0,0" Name="izlaz" VerticalAlignment="Top" Width="80" Click="izlaz_Click" Background="#FFF4FF6F" FontSize="16" />
+        <TextBox Height="67" HorizontalAlignment="Left" Margin="75,133,0,0" Text="{Binding Path=opis}" VerticalAlignment="Top" Width="275" Name="opist" TextWrapping="Wrap" />
+        <Button Content="Učitavanje ikonice" Height="35" HorizontalAlignment="Left" Margin="214,92,0,0" Name="ucitavanje" VerticalAlignment="Top" Width="136" Click="ucitavanje_Click" Background="#FFF4FF6F" FontSize="16" />
+        <Image Height="40" HorizontalAlignment="Left" Source ="{Binding Path=image}" Margin="247,46,0,0" Name="image" Stretch="Fill" VerticalAlignment="Top" Width="103" />
+        <Button Content="Pomoć" Height="35" HorizontalAlignment="Left" Margin="162,251,0,0" Name="help" VerticalAlignment="Top" Width="77" Click="help_Click_1" Background="#FFF4FF6F" FontSize="16" />
+    </Grid>
+</Window>
+

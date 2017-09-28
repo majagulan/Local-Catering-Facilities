@@ -1,0 +1,53 @@
+﻿<Window x:Class="HCI_Lokali.AddLokal"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:HCI_Lokali"
+        Title="Dodavanje lokala" Height="557" Width="672" Background="#FFA2D9FA" >
+
+    <Window.Resources>
+        <local:BoolInverterConverter x:Key="BoolInverterConverter" />
+        <local:ConverterStringToInt x:Key="ConverterStringToInt" />
+    </Window.Resources>
+
+    <Grid >
+        <Label Content="Oznaka:" Height="28" HorizontalAlignment="Left" Margin="20,16,0,0" Name="oznaka" VerticalAlignment="Top" Width="70" FontSize="14" />
+        <Label Content="Ime:" Height="28" HorizontalAlignment="Left" Margin="20,50,0,0" Name="ime" VerticalAlignment="Top" Width="70" FontSize="14" />
+        <Label Content="Tip:" Height="28" HorizontalAlignment="Left" Margin="20,84,0,0" Name="tip" VerticalAlignment="Top" FontSize="14" />
+        <Label Content="Pušenje:" Height="28" HorizontalAlignment="Left" Margin="443,169,0,0" Name="pusenje" VerticalAlignment="Top" FontSize="14" />
+        <Label Content="Kapacitet:" Height="28" HorizontalAlignment="Left" Margin="302,17,0,0" Name="kapacitet" VerticalAlignment="Top" Width="125" FontSize="14" />
+        <Label Content="Rezervacije:" Height="29" HorizontalAlignment="Left" Margin="535,169,0,0" Name="rezervacije" VerticalAlignment="Top" FontSize="14" />
+        <Label Content="Kategorija cena:" Height="28" HorizontalAlignment="Left" Margin="302,89,0,0" Name="cena" VerticalAlignment="Top" Width="172" FontSize="14" />
+        <Label Content="Datum otvaranja:" Height="28" HorizontalAlignment="Left" Margin="302,127,0,0" Name="datum" VerticalAlignment="Top" Width="132" FontSize="14" />
+        <Label Content="Hendikepirani:" HorizontalAlignment="Left" Margin="302,169,0,321" Name="hendikepirani" Width="125" FontSize="14" />
+        <Label Content="Opis:" Height="28" HorizontalAlignment="Left" Margin="20,264,0,0" Name="opis" VerticalAlignment="Top" Width="55" FontSize="14" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="82,17,0,0" Text="{Binding Path=oznaka}" VerticalAlignment="Top" Width="135" Name="oznakabox" TextChanged="oznakabox_TextChanged" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="82,55,0,0" Text="{Binding Path=ime}" VerticalAlignment="Top" Width="135" Name="imebox" TextChanged="imebox_TextChanged" />
+        <TextBox Height="88" HorizontalAlignment="Left" Margin="82,264,0,0"  Text="{Binding Path=opis}" VerticalAlignment="Top" Width="360" Name="opisbox" TextWrapping="Wrap"/>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="82,89,0,0" SelectedValue="{Binding Path=tip}"  VerticalAlignment="Top" Width="135" ItemsSource="{Binding tip_list}" DisplayMemberPath="ime" 
+            SelectedValuePath="ime"  Name="combo" SelectionChanged="lostFocus" />
+        <ComboBox Height="23" HorizontalAlignment="Left" SelectedValue="{Binding Path=kategorijaCena}" Margin="470,0,0,410.2" Name="cenaBox" VerticalAlignment="Bottom" Width="138" />
+
+
+        <Button Content="Učitavanje ikonice" Height="32" HorizontalAlignment="Left" Margin="471,329,0,0" Name="ucitavanje" VerticalAlignment="Top" Width="146" Click="ucitavanje_Click" Background="#FFF4FF6F" FontSize="16" />
+        <Button Content="Novi tip" Height="23" HorizontalAlignment="Left" Margin="223,89,0,0" Name="novi_tip" VerticalAlignment="Top" Width="75" Click="noviTip_Click" Background="#FFF4FF6F" FontSize="16" />
+        <Button Content="Izlaz" Height="35" HorizontalAlignment="Left" Margin="413,397,0,0" Name="izlaz" VerticalAlignment="Top" Width="83" Click="izlaz_Click" Background="#FFF4FF6F" FontSize="16" />
+        <Button Content="Uredu" Height="35" HorizontalAlignment="Left" Margin="160,397,0,0" Name="u_redu" VerticalAlignment="Top" Width="85" Click="u_redu_Click" Background="#FFF4FF6F" FontSize="16" />
+        <Image Height="59" HorizontalAlignment="Left" Source ="{Binding Path=image}"  Margin="488,264,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="120"/>
+        <ListBox Height="77" HorizontalAlignment="Left" SelectionMode="Multiple" ItemsSource="{Binding eti_list}" DisplayMemberPath="oznaka" 
+         Margin="82,142,0,0" Name="listBox" VerticalAlignment="Top" Width="135" />
+        <Label Content="Etikete:" Height="28" HorizontalAlignment="Left" Margin="21,142,0,0" Name="label1" VerticalAlignment="Top" Width="69" FontSize="14" />
+        <Button Content="Pomoć" Height="36" HorizontalAlignment="Left" Margin="289,441,0,0" Name="help" VerticalAlignment="Top" Width="82" Click="help_Click_1" Background="#FFF4FF6F" FontSize="16"  />
+        <TextBox HorizontalAlignment="Left" Margin="472,19,0,476.2"  Name="kapacitetText" Width="138" Text="{Binding Path=kapacitet,  Converter={StaticResource ConverterStringToInt}}" TextChanged="kapacitetText_TextChanged" FontSize="14" />
+        <Label Content="Služenje alkohola:" Height="28" HorizontalAlignment="Left" Margin="302,51,0,0" Name="label2" VerticalAlignment="Top" FontSize="14" />
+        <ComboBox Height="23" SelectedValue="{Binding Path=statusalkohola}" HorizontalAlignment="Left" Margin="470,56,0,0" Name="alkohol" VerticalAlignment="Top" Width="138"  />
+        <RadioButton Content="Da" HorizontalAlignment="Left" Margin="334,201,0,301.2" IsChecked="{Binding hendikepirani}" GroupName="region" Name="naselje" FontSize="14" />
+        <RadioButton Content="Ne" Height="16" HorizontalAlignment="Left" Margin="334,223,0,0" Name="naselje1" VerticalAlignment="Top" GroupName="region" IsChecked="{Binding hendikepirani, Converter={StaticResource BoolInverterConverter}}" FontSize="14" />
+        <RadioButton Content="Da" Height="16" HorizontalAlignment="Right" Margin="0,201,169.6,0"  IsChecked="{Binding pusenje}" VerticalAlignment="Top" GroupName="pusenje" FontSize="14" />
+        <RadioButton Content="Ne" Height="16" HorizontalAlignment="Right" Margin="0,223,169.6,0"  IsChecked="{Binding pusenje, Converter={StaticResource BoolInverterConverter}}" GroupName="pusenje"  Name="pusenje1" VerticalAlignment="Top" FontSize="14" />
+        <RadioButton Content="Da" Height="16" HorizontalAlignment="Right" Margin="0,201,73.6,0" GroupName="lista"  IsChecked="{Binding rezervacije}" Name="lista1" VerticalAlignment="Top" FontSize="14" Width="38" />
+        <RadioButton Content="Ne" Height="16" HorizontalAlignment="Left" Margin="544,223,0,0" GroupName="lista" IsChecked="{Binding rezervacije, Converter={StaticResource BoolInverterConverter}}" Name="lista2" VerticalAlignment="Top" FontSize="14" Width="38" />
+        <DatePicker Height="28" HorizontalAlignment="Left"  SelectedDate="{Binding datum}" Margin="470,127,0,0" x:Name="datePicker1" VerticalAlignment="Top" Width="139" IsTabStop="True" TabIndex="14" FontSize="14" ToolTip="Izaberite datum" DisplayDateEnd="2017-06-05" FirstDayOfWeek="Monday"  />
+
+
+    </Grid>
+</Window>

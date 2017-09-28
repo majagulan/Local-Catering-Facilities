@@ -1,0 +1,18 @@
+﻿<Window x:Class="HCI_Lokali.AddEtiketa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wpfx="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="Dodavanje etikete" Height="362" Width="410.066" Background="#FFA2D9FA">
+    <Grid>
+        <Label Content="Oznaka:" Name="Oznaka"  Height="37" HorizontalAlignment="Left" Margin="24,29,0,0" VerticalAlignment="Top" Width="81" FontSize="14" />
+        <Label Content="Boja:" Name="Boja" Height="28" HorizontalAlignment="Left" Margin="24,71,0,0" VerticalAlignment="Top" FontSize="14" />
+        <Label Content="Opis:" Name="Opis" Height="28" HorizontalAlignment="Left" Margin="24,113,0,0" VerticalAlignment="Top" FontSize="14" />
+        <TextBox Height="32" HorizontalAlignment="Left" Margin="110,20,0,0" Name="oznaka" Text="{Binding Path=oznaka}" VerticalAlignment="Top" Width="185" TextChanged="oznaka_TextChanged" />
+        <TextBox Height="77" HorizontalAlignment="Left" Margin="110,113,0,0" Name="opis" Text="{Binding Path=opis}" VerticalAlignment="Top" Width="245" TextWrapping="Wrap"/>
+        <wpfx:ColorPicker Name="boje" DisplayColorAndName="false" SelectedColor="{Binding Path=boje}" Margin="110,71,109,229" ShowAdvancedButton="False" AvailableColors="{Binding Path=ColorList}" ShowStandardColors="False" />
+        <!--StandardColors="{Binding ColorList}"-->
+        <Button Content="Uredu" Height="33" HorizontalAlignment="Left" Margin="91,212,0,0" Name="U_redu" VerticalAlignment="Top" Width="84" Click="uRedu_Click" Background="#FFF4FF6F" FontSize="16" />
+        <Button Content="Izlaz" Height="33" HorizontalAlignment="Left" Margin="260,212,0,0" Name="Izlaz" VerticalAlignment="Top" Width="87" Click="izlaz_Click" Background="#FFF4FF6F" FontSize="16" />
+        <Button Content="Pomoć" Height="34" HorizontalAlignment="Left" Margin="183,262,0,0" Name="help" VerticalAlignment="Top" Width="75" Click="help_Click" Background="#FFF4FF6F" FontSize="16"  />
+    </Grid>
+</Window>

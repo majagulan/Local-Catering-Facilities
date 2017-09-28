@@ -1,0 +1,25 @@
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\dodavanje\AddEtiketa.baml
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\dodavanje\AddTip.baml
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\help klase\HelpViewer.baml
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\izmeni\EditEtiketa.baml
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\izmeni\EditTip.baml
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\MainWindow.baml
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\pregled\EtiketaList.baml
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\pregled\PregledLokala.baml
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\pregled\TipList.baml
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\dodavanje\AddEtiketa.g.cs
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\dodavanje\AddLokal.g.cs
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\dodavanje\AddTip.g.cs
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\help klase\HelpViewer.g.cs
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\izmeni\EditEtiketa.g.cs
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\izmeni\EditLokal.g.cs
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\izmeni\EditTip.g.cs
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\MainWindow.g.cs
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\pregled\EtiketaList.g.cs
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\pregled\PregledLokala.g.cs
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\pregled\TipList.g.cs
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\App.g.cs
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\HCI_Lokali_Content.g.cs
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\HCI_Lokali_MarkupCompile.cache
+C:\Users\maja\Documents\Visual Studio 2017\Projects\HCI_Lokali\HCI_Lokali\obj\Release\HCI_Lokali_MarkupCompile.lref
